@@ -1,9 +1,11 @@
 import fetchData from '../http';
 
-test('should be error', () => {
-  function newError() {
+test('error', () => {
+  function mistake() {
     fetchData('https://server/user/1');
-
-    expect(newError).toThrowError(new Error('Mock this!'));
   }
+  expect(mistake).toThrowError(new Error('Mock this!'));
+  // expect(() => {
+  //   fetchData('https://server/user/2');
+  // }).toThrow();
 });
